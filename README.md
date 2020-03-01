@@ -78,5 +78,5 @@ Your OS may or may not have some installed by default. Not to worry, autoenum re
 * tput
 * jq
 
-## Contributors
+## Thanks
 Dievus

@@ -49,10 +49,12 @@ autoenum
 ### Version 2.0
 * Autoenum now runs as a console tool similar to msfconsole. 
 
+### Version 2.0.1
+* persistent shell command
+
 ### Version 2.1 (Work in Progress)
 * AD enumeration (suite)
 * imap, mysql,redis enumeration
-* persistent shell command
 
 ## Dependencies
 Your OS may or may not have some installed by default. Not to worry, autoenum recognizes tools not installed and installs them for you, even updating if they aren't up-to-date!
@@ -78,5 +80,5 @@ Your OS may or may not have some installed by default. Not to worry, autoenum re
 * tput
 * jq
 
-## Contributors
+## Thanks
 Dievus

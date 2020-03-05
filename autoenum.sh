@@ -9,7 +9,7 @@ tput setaf 6
         echo '  \__,_/ \__,_/ \__/ \____/ \___//_/ /_/ \__,_//_/ /_/ /_/   '
         echo "                                                             "
 tput bold; echo "Author: Grimmie                                           "
-tput bold; echo "Version: 2.0                                              "
+tput bold; echo "Version: 2.0.1                                            "
         tput sgr0
         sleep 1.025
 }
@@ -376,7 +376,7 @@ cleanup (){
 	echo "[+] Cleaning up..."
 	find $IP/autoenum/ -type d -empty -delete
 	find $IP/autoenum/ -type f -empty -delete
-	rm installed
+	if [[ -f "installed" ]];then rm installed;fi
 }
 
 get_ip (){
@@ -446,12 +446,12 @@ halp_meh_pws (){
 	echo "[*] commands - shows all avaliable commands"
 	echo "[*] shell - allows you to run commands as if in a terminal"
         echo "[*] upgrade - checks to see if any dependencies require an update"
-        echo "[*] set_ip - prompt"
+        echo "[*] set_ip - opens prompt to change target IP"
         echo -e
         echo "Scan Profiles:"
         echo "[*] aggr - scans all ports aggressively"
         echo "[*] reg - scans all ports normally, no scripts and checks only for OS"
-	echo "[*] quick - simple script scan designed to indentify box name"
+	echo "[*] quick - scans with scripts enabled to get box name"
         echo -e
 }
 
@@ -526,7 +526,7 @@ while true && [[ ! "$IP" == " " ]];do
                         break
                         ;;
 		"quick")
-			nmap -sC $IP
+			nmap -sC -sV -T4 $IP
 			menu
 			break
 			;;

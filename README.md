@@ -54,7 +54,7 @@ autoenum
 
 ### Version 2.1 (Work in Progress)
 * AD enumeration (suite)
-* imap, mysql,redis enumeration
+* imap, mysql, redis, cups, ipp enumeration
 
 ## Dependencies
 Your OS may or may not have some installed by default. Not to worry, autoenum recognizes tools not installed and installs them for you, even updating if they aren't up-to-date!

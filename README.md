@@ -52,8 +52,8 @@ autoenum
 ### Version 2.0.1
 * persistent shell command
 
-### Version 2.1 (Work in Progress)
-* AD enumeration (suite)
+### Version 2.4 (Work in Progress)
+* adding vuln scan profile and combined scans
 * imap, mysql, redis, cups, ipp enumeration
 
 ## Dependencies
